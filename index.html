@@ -1133,6 +1133,7 @@ document.addEventListener('drop',e=>{const z=e.target.closest&&e.target.closest(
   if(id){const d=S.draft;['A','B','U'].forEach(k=>d[k]=d[k].filter(x=>x!==id));d[z.dataset.drop].push(id);d.dirty=true;render()}});
 window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(TABS.some(t=>t[0]===h)&&h!==S.tab&&(h!=='utenti'||S.me.owner)){S.tab=h;S.matchId=null;render()}});
 </script>
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import { getFirestore, collection, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
